@@ -1,4 +1,4 @@
-<%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles"%>
+<%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page contentType="text/html;charset=UTF-8"%>
@@ -12,9 +12,10 @@
 
 <spring:url value="/resources/css/tripmanager.css" var="tripmanagerCSS" />
 <spring:url value="/resources/css/bootstrap.min.css" var="bootstrapCss" />
+<spring:url value="/resources/css/bootstrap-datepicker.min.css" var="bootstrapDatepickerCss" />
 
 <link href="${bootstrapCss}" rel="stylesheet">
-<link href="${datepickerCss} }" rel="stylesheet">
+<link href="${bootstrapDatepickerCss}" rel="stylesheet">
 <link href="${tripmanagerCSS}" rel="stylesheet">
 
 
@@ -37,14 +38,15 @@
 
 
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<spring:url value="/resources/js/jquery-3.1.0.min.js" var="jqueryJS" />
 	<spring:url value="/resources/js/bootstrap.min.js" var="bootstrapJS" />
-q	<spring:url value="/resources/js/jquery-3.1.0.min.js" var="jqueryJS" />
+	<spring:url value="/resources/js/bootstrap-datepicker.min.js" var="bootstrapDatepickerJS" />
+	<spring:url value="/resources/js/bootstrap-datepicker.fr.min.js" var="bootstrapDatepickerFRJS" />
 
-	<link href="${bootstrapJS}" rel="stylesheet">
-	<link href="${bootstrapDatePickerJS}" rel="stylesheet">
-	<link href="${bootstrapDatePickerFRJS}" rel="stylesheet" charset="UTF-8">
-	<link href="${jqueryJS}" rel="stylesheet">
-	
+	<script src="${jqueryJS}"></script>
+	<script src="${bootstrapJS}"></script>
+	<script src="${bootstrapDatepickerJS}"></script>
+	<script src="${bootstrapDatepickerFRJS}"></script>
 
 	
 

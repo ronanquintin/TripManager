@@ -3,6 +3,8 @@
  */
 package org.ronan.tripmanager.entity;
 
+import java.time.ZonedDateTime;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -25,6 +27,13 @@ public class TripEntity {
 	@Column(name = "NAME")
 	private String name;
 
+
+	@Column(name = "DEPARTURE_DATE_TIME")
+	private ZonedDateTime departureDateTime;
+
+	@Column(name = "RETURN_DATE_TIME")
+	private ZonedDateTime returnDateTime;
+
 	public String getName() {
 		return name;
 	}
@@ -39,6 +48,22 @@ public class TripEntity {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	public ZonedDateTime getDepartureDateTime() {
+		return departureDateTime;
+	}
+
+	public void setDepartureDateTime(ZonedDateTime departureDateTime) {
+		this.departureDateTime = departureDateTime;
+	}
+
+	public ZonedDateTime getReturnDateTime() {
+		return returnDateTime;
+	}
+
+	public void setReturnDateTime(ZonedDateTime returnDateTime) {
+		this.returnDateTime = returnDateTime;
 	}
 
 }

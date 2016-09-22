@@ -10,7 +10,7 @@ import javax.annotation.PostConstruct;
 
 import org.ronan.tripmanager.dto.TripDTO;
 import org.ronan.tripmanager.entity.TripEntity;
-import org.ronan.tripmanager.mapper.TripMapper;
+import org.ronan.tripmanager.mapper.TripBO2DTOMapper;
 import org.ronan.tripmanager.repository.TripRepository;
 import org.ronan.tripmanager.service.TripService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,13 +26,13 @@ import fr.xebia.extras.selma.Selma;
 public class TripServiceImpl implements TripService {
 
 	@Autowired
-	TripRepository tripRepository;
+	private TripRepository tripRepository;
 
-	TripMapper mapper;
+	private TripBO2DTOMapper mapper;
 
 	@PostConstruct
 	public void init() {
-		this.mapper = Selma.builder(TripMapper.class).build();
+		this.mapper = Selma.builder(TripBO2DTOMapper.class).build();
 	}
 
 	@Override
@@ -46,6 +46,14 @@ public class TripServiceImpl implements TripService {
 		}
 		
 		return tripDTOs;
+	}
+
+	@Override
+	public void newTrip(TripDTO tripDTO) {
+		TripEntity entity = this.mapper.asTripEntity(tripDTO);
+		this.tripRepository.save(entity);
+
+
 	}
 
 }

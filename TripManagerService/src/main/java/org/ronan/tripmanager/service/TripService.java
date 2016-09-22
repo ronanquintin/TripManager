@@ -16,4 +16,6 @@ public interface TripService {
 
 	public List<TripDTO> listAllTrips();
 
+	public void newTrip(TripDTO tripDTO);
+
 }

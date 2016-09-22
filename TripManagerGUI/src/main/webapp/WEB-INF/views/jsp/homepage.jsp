@@ -1,11 +1,11 @@
-<%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles"%>
+<%@ taglib prefix="tiles" uri="http://tiles.apache.org/tags-tiles"%>
 <tiles:insertDefinition name="skeleton">
 	<tiles:putAttribute name="body">
 
 		<div class="jumbotron">
-			<h1>Welcome to Trip Manager. The app which help you to travel</h1>
+			<h1>Welcome to Trip Manager.</h1>
 			<p class="lead">
-				This will be great!
+				The app which help you to travel. This will be great!
 			</p>
 
 		</div>
