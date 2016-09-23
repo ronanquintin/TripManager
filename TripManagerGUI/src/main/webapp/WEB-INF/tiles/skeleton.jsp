@@ -37,16 +37,21 @@
 	</div>
 
 
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<spring:url value="/resources/js/jquery-3.1.0.min.js" var="jqueryJS" />
 	<spring:url value="/resources/js/bootstrap.min.js" var="bootstrapJS" />
 	<spring:url value="/resources/js/bootstrap-datepicker.min.js" var="bootstrapDatepickerJS" />
 	<spring:url value="/resources/js/bootstrap-datepicker.fr.min.js" var="bootstrapDatepickerFRJS" />
+	<spring:url value="/resources/js/tripmanager.js" var="tripmanagerJS" />
+	
 
 	<script src="${jqueryJS}"></script>
 	<script src="${bootstrapJS}"></script>
 	<script src="${bootstrapDatepickerJS}"></script>
 	<script src="${bootstrapDatepickerFRJS}"></script>
+	<script src="${tripmanagerJS}"></script>
+	
+	<tiles:insertAttribute name="scripts" />
+	
 
 	
 

@@ -17,7 +17,7 @@
 							<spring:url value="/trips" var="tripsUrl" />
 							<li><a href="${tripsUrl}">My trips</a></li>
 							<spring:url value="/trips/new" var="createTripsUrl" />
-							<li><a href="${createTripUrl}">Create a new trip</a></li>
+							<li><a href="${createTripsUrl}">Create a new trip</a></li>
 						</ul>
 					</li>
 				</ul>
